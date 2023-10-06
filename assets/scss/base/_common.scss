@@ -115,7 +115,7 @@ img{
 	}
 
 	&__sub-title{
-		color: $color-gray;
+		color: $color-secondary;
 		font-size: toRem(30);
 		@include min-xxl{
 			font-size: toRem(40);
@@ -128,10 +128,6 @@ img{
 		@include min-xl{
 			margin-bottom: toRem(30);
 		}
-	}
-
-	&--center{
-		text-align: center;
 	}
 }
 
@@ -160,4 +156,10 @@ img{
 .bg-primary
 {
 	--bs-primary-rgb: #{$color-primary-rgb};
+}
+
+.text-secondary,
+.bg-secondary
+{
+	--bs-secondary-rgb: #{$color-secondary-rgb};
 }

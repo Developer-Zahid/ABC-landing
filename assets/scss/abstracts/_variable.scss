@@ -1,13 +1,30 @@
 // SCSS Variable's
 
-$font-primary: 'Figtree', sans-serif;
-$font-secondary: 'Figtree', sans-serif;
-$font-tertiary: 'Nunito Sans', sans-serif;
+$scss-font-primary: 'Figtree', sans-serif;
+$scss-color-primary:#da2128;
+$scss-color-primary-rgb: toRGB($scss-color-primary);
+$scss-color-secondary:#022561;
+$scss-color-secondary-rgb: toRGB($scss-color-secondary);
+$scss-color-secondary--dark:#010d23;
 
-$color-primary:#da2128;
-$color-primary-rgb: toRGB($color-primary);
-$color-primary--dark:#6d0303;
-$color-secondary:#022561;
+:root{
+    --color-primary: #{$scss-color-primary};
+    --color-primary-rgb: #{$scss-color-primary-rgb};
+    --color-secondary: #{$scss-color-secondary};
+    --color-secondary-rgb: #{$scss-color-secondary-rgb};
+    --color-secondary--dark: #{$scss-color-secondary--dark};
+    --font-primary: #{$scss-font-primary};
+}
+
+$font-primary: var(--font-primary);
+$font-secondary: var(--font-primary);
+$font-tertiary: var(--font-primary);
+
+$color-primary: var(--color-primary);
+$color-primary-rgb: var(--color-primary-rgb);
+$color-secondary: var(--color-secondary);
+$color-secondary-rgb: var(--color-secondary-rgb);
+$color-secondary--dark:var(--color-secondary--dark);
 
 $color-gray:#333333;
 $color-gray-thin:#999999;

@@ -12,6 +12,15 @@ Author Website:     https://developer-zahid-portfolio.netlify.app/
 Author Email: 	    dgtaltechzahidhasan@gmail.com
 ---------------------------------------------------------------------
 */
+:root {
+  --color-primary: #da2128;
+  --color-primary-rgb: 218, 33, 40;
+  --color-secondary: #022561;
+  --color-secondary-rgb: 2, 37, 97;
+  --color-secondary--dark: #010d23;
+  --font-primary: Figtree, sans-serif;
+}
+
 /* Reset CSS */
 *,
 *::before,
@@ -22,12 +31,12 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
 
 ::-moz-selection {
   color: #ffffff;
-  background: #da2128;
+  background: var(--color-primary);
 }
 
 ::selection {
   color: #ffffff;
-  background: #da2128;
+  background: var(--color-primary);
 }
 
 html,
@@ -45,7 +54,7 @@ html {
 
 body {
   color: #000000;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 400;
 }
 
@@ -123,9 +132,9 @@ img {
   margin-bottom: 1.875rem;
 }
 .section-header__title {
-  color: #da2128;
+  color: var(--color-primary);
   font-size: 1.125rem;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
   margin-bottom: 1.25rem;
 }
@@ -135,9 +144,9 @@ img {
   }
 }
 .section-header__sub-title {
-  color: #333333;
+  color: var(--color-secondary);
   font-size: 1.875rem;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.8px;
@@ -153,9 +162,6 @@ img {
     margin-bottom: 1.875rem;
   }
 }
-.section-header--center {
-  text-align: center;
-}
 
 .underline {
   position: relative;
@@ -165,7 +171,7 @@ img {
   display: block;
   width: 4.0625rem;
   height: 5px;
-  background-color: #da2128;
+  background-color: var(--color-primary);
 }
 
 .match-height > [class*=col] {
@@ -186,7 +192,12 @@ img {
 
 .text-primary,
 .bg-primary {
-  --bs-primary-rgb: 218, 33, 40;
+  --bs-primary-rgb: var(--color-primary-rgb);
+}
+
+.text-secondary,
+.bg-secondary {
+  --bs-secondary-rgb: var(--color-secondary-rgb);
 }
 
 .footer__block__social__link, .footer__bottom__link, .header .navbar-brand__image, .slick-dots li button, .slick__arrows {
@@ -205,7 +216,7 @@ img {
   height: 100%;
 }
 
-.banner__sub-title, .banner__title, .footer__block__title, .testimonial__card__name, .btn, .section-header {
+.banner__title, .footer__block__title, .testimonial__card__name, .btn, .section-header {
   text-transform: uppercase;
 }
 
@@ -214,7 +225,7 @@ img {
   isolation: isolate;
 }
 
-.testimonial::after, .feature__card__icon::before, .testimonial__card__footer::before, .testimonial__card__footer::after {
+.testimonial::after, .banner::after, .feature__card__icon::before, .testimonial__card__footer::before, .testimonial__card__footer::after {
   content: "";
   position: absolute;
 }
@@ -228,7 +239,7 @@ img {
   --bs-btn-padding-y: 0.9375rem;
   --bs-btn-padding-x: 1.5625rem;
   --bs-btn-font-size: 1rem;
-  --bs-btn-font-family: Figtree, sans-serif;
+  --bs-btn-font-family: var(--font-primary);
   --bs-btn-font-weight: 800;
   --bs-btn-line-height: 1;
   -webkit-box-shadow: none !important;
@@ -243,17 +254,17 @@ img {
 }
 
 .btn-primary {
-  --bs-btn-bg: #da2128;
-  --bs-btn-border-color: #da2128;
-  --bs-btn-hover-bg: #000000;
-  --bs-btn-hover-border-color: #000000;
-  --bs-btn-active-bg: #000000;
-  --bs-btn-active-border-color: #000000;
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: var(--color-primary);
+  --bs-btn-hover-bg: var(--color-secondary);
+  --bs-btn-hover-border-color: var(--color-secondary);
+  --bs-btn-active-bg: var(--color-secondary);
+  --bs-btn-active-border-color: var(--color-secondary);
 }
 .btn-primary:focus {
   color: #ffffff;
-  background-color: #000000;
-  border-color: #000000;
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 
 .scroll-top {
@@ -268,7 +279,7 @@ img {
   height: 1.875rem;
   font-size: 1.1rem;
   color: #ffffff;
-  background-color: #da2128;
+  background-color: var(--color-primary);
 }
 
 .form-control, .form-select {
@@ -358,7 +369,7 @@ select {
           transform: translate(-50%, -50%);
   font-size: 1.875rem;
   font-weight: 700;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -383,7 +394,7 @@ select {
   color: #333333;
   font-size: 1.125rem;
   font-weight: 300;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
   font-style: italic;
 }
 @media (min-width: 1400px) {
@@ -446,7 +457,7 @@ select {
   -webkit-transform: skewY(-3.6deg);
       -ms-transform: skewY(-3.6deg);
           transform: skewY(-3.6deg);
-  background-color: #da2128;
+  background-color: var(--color-primary);
   height: 2.5rem;
 }
 .testimonial__card__footer::after {
@@ -459,7 +470,7 @@ select {
 .testimonial__card__title {
   font-size: 1.25rem;
   font-weight: 700;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
 }
 @media (min-width: 1400px) {
   .testimonial__card__title {
@@ -506,7 +517,7 @@ select {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: #da2128;
+  background-color: var(--color-primary);
   -webkit-transform: skewX(-14deg);
       -ms-transform: skewX(-14deg);
           transform: skewX(-14deg);
@@ -527,7 +538,7 @@ select {
 .feature__card__title {
   color: #000000;
   font-weight: 700;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
 }
 @media (max-width: 767.98px) {
   .feature__card__title {
@@ -542,7 +553,7 @@ select {
 .feature__card__text {
   color: #333333;
   font-weight: 300;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
   margin-bottom: 0;
 }
 @media (min-width: 1400px) {
@@ -571,7 +582,7 @@ select {
   z-index: 2;
   cursor: pointer;
   color: #ffffff;
-  background-color: #da2128;
+  background-color: var(--color-primary);
   width: 3.125rem;
   height: 3.125rem;
   font-size: 1.25rem;
@@ -646,7 +657,7 @@ select {
   background-color: #000000;
 }
 .slick-dots li.slick-active button {
-  background-color: #da2128;
+  background-color: var(--color-primary);
 }
 
 /* Header Section Style */
@@ -690,7 +701,7 @@ select {
   padding-bottom: 1.25rem;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
 }
 @media (min-width: 992px) {
   .footer__bottom {
@@ -730,7 +741,7 @@ select {
   font-size: 1.625rem;
   font-weight: 700;
   letter-spacing: -1px;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
 }
 .footer__block__title.underline::after {
   width: 2.625rem;
@@ -751,12 +762,12 @@ select {
   font-size: 1.25rem;
 }
 .footer__block__social__link:hover, .footer__block__social__link:focus-visible {
-  color: #da2128;
+  color: var(--color-primary);
 }
 .footer__text, .footer__list__link__text {
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
 }
 @media (min-width: 576px) {
   .footer__text, .footer__list__link__text {
@@ -791,7 +802,7 @@ select {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-size: 0.625rem;
-  color: #da2128;
+  color: var(--color-primary);
 }
 
 .banner {
@@ -802,6 +813,16 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-top: 0.625rem solid var(--color-primary);
+}
+.banner::after {
+  top: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(var(--color-secondary-rgb), 0.7)), to(transparent));
+  background-image: -o-linear-gradient(rgba(var(--color-secondary-rgb), 0.7), transparent);
+  background-image: linear-gradient(rgba(var(--color-secondary-rgb), 0.7), transparent);
+  width: 100%;
+  height: 50%;
+  z-index: -1;
 }
 .banner__bg {
   -o-object-fit: cover;
@@ -811,10 +832,9 @@ select {
 }
 .banner__title {
   font-size: 1.875rem;
-  font-family: "Figtree", sans-serif;
-  font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: -2px;
+  font-family: var(--font-primary);
+  font-weight: 800;
+  line-height: 1.04;
 }
 @media (min-width: 576px) {
   .banner__title {
@@ -833,23 +853,19 @@ select {
 }
 @media (min-width: 1400px) {
   .banner__title {
-    font-size: 6.25rem;
+    font-size: 5.625rem;
   }
 }
-.banner__sub-title {
-  font-size: 1rem;
+.banner__text {
+  font-size: 1.125rem;
   font-weight: 600;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--font-primary);
+  line-height: 1.54;
   margin-bottom: 1.875rem;
 }
 @media (min-width: 768px) {
-  .banner__sub-title {
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 992px) {
-  .banner__sub-title {
-    font-size: 1.875rem;
+  .banner__text {
+    font-size: 1.625rem;
   }
 }
 
@@ -858,7 +874,7 @@ select {
   margin-bottom: 0.9375rem;
   border-radius: 8px;
   overflow: hidden;
-  color: #da2128;
+  color: var(--color-primary);
   -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1019607843);
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1019607843);
 }
@@ -933,7 +949,7 @@ select {
 .service-card__body__top {
   padding: 0.9375rem;
   color: #ffffff;
-  background-color: #da2128;
+  background-color: var(--color-primary);
 }
 .service-card__body__top__title {
   font-size: 1rem;
@@ -960,9 +976,6 @@ select {
   all: unset;
 }
 
-.testimonial {
-  background-color: #6d0303;
-}
 .testimonial::after {
   z-index: -1;
   left: 0;
