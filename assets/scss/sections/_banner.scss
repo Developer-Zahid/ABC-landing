@@ -4,6 +4,9 @@
     display: flex;
     align-items: center;
     border-top: toRem(10) solid $color-primary;
+    @include max-md{
+        border-top-width: 6px;
+    }
 
     &::after{
         @extend %common-pseudo;
@@ -22,28 +25,23 @@
     }
 
     &__title{
-        font-size: toRem(30);
-        @include min-sm{
-            font-size: toRem(50);
-        }
-        @include min-md{
-            font-size: toRem(60);
-        }
+        font-size: toRem(40);
         @include min-lg{
-            font-size: toRem(80);
+            font-size: toRem(60);
         }
         @include min-xxl{
             font-size: toRem(90);
         }
         font-family: $font-primary;
         font-weight: 800;
+        margin-top: toRem(15);
         line-height: 1.04;
         @extend %uppercase;
     }
     
     &__text{
         font-size: toRem(18);
-        @include min-md{
+        @include min-xxl{
             font-size: toRem(26);
         }
         font-weight: 600;

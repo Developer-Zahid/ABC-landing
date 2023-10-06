@@ -14,11 +14,44 @@
 
 		&-brand__image{
 			max-height: toRem(65);
+			@include min-xxl{
+				max-height: toRem(90);
+			}
 			@extend %transition;
+		}
+
+		&__btn{
+			display: inline-block;
+			font-size: toRem(16);
+			@include min-sm{
+				font-size: toRem(24);
+			}
+			font-weight: 800;
+			font-family: $font-primary;
+			padding: 5px;
+
+			&__icon{
+				color: $color-primary;
+				margin-right: toRem(10);
+			}
+
+			&__text{
+				color: $color-secondary;
+			}
+
+			&:hover,
+			&:focus-visible
+			{
+				text-decoration: underline;
+			}
 		}
 	}
 
 	&.fixed{
 		box-shadow: 0 3px 45px rgba(0,0,0,0.15);
+
+		.navbar-brand__image{
+			max-height: toRem(65);
+		}
 	}
 }

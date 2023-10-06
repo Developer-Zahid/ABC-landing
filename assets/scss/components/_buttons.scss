@@ -7,7 +7,7 @@
 	@include min-xxl{
 		--bs-btn-padding-y: #{toRem(20)};
 		--bs-btn-padding-x: #{toRem(35)};
-		--bs-btn-font-size: #{toRem(30)};
+		--bs-btn-font-size: #{toRem(24)};
 	}
 
 
@@ -16,6 +16,10 @@
 	--bs-btn-line-height: 1;
 	box-shadow: none !important;
 	@extend %uppercase;
+
+	&__icon{
+		margin-right: toRem(10);
+	}
 }
 
 .btn-primary{

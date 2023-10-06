@@ -249,8 +249,11 @@ img {
   .btn {
     --bs-btn-padding-y: 1.25rem;
     --bs-btn-padding-x: 2.1875rem;
-    --bs-btn-font-size: 1.875rem;
+    --bs-btn-font-size: 1.5rem;
   }
+}
+.btn__icon {
+  margin-right: 0.625rem;
 }
 
 .btn-primary {
@@ -677,9 +680,39 @@ select {
 .header .navbar-brand__image {
   max-height: 4.0625rem;
 }
+@media (min-width: 1400px) {
+  .header .navbar-brand__image {
+    max-height: 5.625rem;
+  }
+}
+.header .navbar__btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: var(--font-primary);
+  padding: 5px;
+}
+@media (min-width: 576px) {
+  .header .navbar__btn {
+    font-size: 1.5rem;
+  }
+}
+.header .navbar__btn__icon {
+  color: var(--color-primary);
+  margin-right: 0.625rem;
+}
+.header .navbar__btn__text {
+  color: var(--color-secondary);
+}
+.header .navbar__btn:hover, .header .navbar__btn:focus-visible {
+  text-decoration: underline;
+}
 .header.fixed {
   -webkit-box-shadow: 0 3px 45px rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 45px rgba(0, 0, 0, 0.15);
+}
+.header.fixed .navbar-brand__image {
+  max-height: 4.0625rem;
 }
 
 /* Footer Section Style */
@@ -815,6 +848,11 @@ select {
           align-items: center;
   border-top: 0.625rem solid var(--color-primary);
 }
+@media (max-width: 991.98px) {
+  .banner {
+    border-top-width: 6px;
+  }
+}
 .banner::after {
   top: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(var(--color-secondary-rgb), 0.7)), to(transparent));
@@ -831,24 +869,15 @@ select {
   z-index: -1;
 }
 .banner__title {
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   font-family: var(--font-primary);
   font-weight: 800;
+  margin-top: 0.9375rem;
   line-height: 1.04;
-}
-@media (min-width: 576px) {
-  .banner__title {
-    font-size: 3.125rem;
-  }
-}
-@media (min-width: 768px) {
-  .banner__title {
-    font-size: 3.75rem;
-  }
 }
 @media (min-width: 992px) {
   .banner__title {
-    font-size: 5rem;
+    font-size: 3.75rem;
   }
 }
 @media (min-width: 1400px) {
@@ -863,7 +892,7 @@ select {
   line-height: 1.54;
   margin-bottom: 1.875rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
   .banner__text {
     font-size: 1.625rem;
   }
