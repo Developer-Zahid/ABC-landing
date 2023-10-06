@@ -2,6 +2,10 @@
 .footer{
     color: $color-white;
 
+    &__top{
+        background-color: $color-secondary--dark;
+    }
+
     .section-gap--fix{
         @include max-xl{
             padding-bottom: 0;
@@ -9,8 +13,83 @@
     }
 
     &__logo{
+        max-height: toRem(130);
         @include max-lg{
             max-height: toRem(80);
+        }
+    }
+
+    &__block{
+        @extend %card-gap;
+
+        &__title{
+            margin-bottom: toRem(20);
+            font-size: toRem(22);
+            font-weight: 700;
+            font-family: $font-primary;
+            @extend %uppercase;
+
+            &.underline::after{
+                width: toRem(42);
+                height: 4px;
+                margin-top: toRem(20);
+            }
+        }
+
+        &__social{
+            display: flex;
+            align-items: center;
+            gap: toRem(18);
+            color: $color-primary;
+            margin-top: toRem(30);
+            
+            &__link{
+                font-size: toRem(20);
+                padding: 2px;
+                @extend %transition;
+    
+                &:hover,
+                &:focus-visible
+                {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    &__list{
+        list-style-type: none;
+        padding-left: 0;
+
+        &__item{
+            margin-top: toRem(18);
+        }
+        
+        &__link{
+            display: flex;
+            align-items: center;
+            font-size: toRem(16);
+            @include min-sm{
+                font-size: toRem(17);
+            }
+            font-weight: 300;
+            font-family: $font-primary;
+            gap: toRem(8);
+            @extend %transition;
+
+            &:hover,
+            &:focus-visible
+            {
+                color: $color-primary;
+            }
+
+            &__icon{
+                flex-shrink: 0;
+                color: $color-primary;
+                &:not(.footer__list__link__icon--lg){
+                    font-size: toRem(10);
+                }
+            }
         }
     }
 
@@ -32,8 +111,10 @@
         &__text{
             font-size: toRem(14);
             @include min-sm{
-                font-size: toRem(18);
+                font-size: toRem(17);
             }
+            font-weight: 300;
+            font-family: $font-primary;
         }
 
         &__link{
@@ -42,95 +123,7 @@
             &:hover,
             &:focus-visible
             {
-                color: $color-black;
-            }
-        }
-
-        &__navbar{
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: toRem(20);
-        }
-    }
-
-    &__block{
-        @extend %card-gap;
-
-        &__title{
-            margin-bottom: toRem(25);
-            font-size: toRem(26);
-            font-weight: 700;
-            letter-spacing: -1px;
-            font-family: $font-secondary;
-            @extend %uppercase;
-
-            &.underline::after{
-                width: toRem(42);
-                height: 4px;
-                margin-top: toRem(20);
-            }
-        }
-
-        &__social{
-            display: flex;
-            align-items: center;
-            gap: toRem(20);
-            color: #808080;
-            
-            &__link{
-                font-size: toRem(20);
-                @extend %transition;
-    
-                &:hover,
-                &:focus-visible
-                {
-                    color: $color-primary;
-                }
-            }
-        }
-    }
-
-    &__text,
-    &__list__link__text
-    {
-        font-size: toRem(16);
-        @include min-sm{
-            font-size: toRem(18);
-        }
-        font-weight: 400;
-        font-family: $font-primary;
-    }
-
-    &__text{
-        line-height: 1.45;
-        margin-top: toRem(35);
-        margin-bottom: toRem(35);
-    }
-
-    &__list{
-        list-style-type: none;
-        padding-left: 0;
-
-        &__item{
-            margin-top: toRem(18);
-        }
-        
-        &__link{
-            display: flex;
-            align-items: center;
-            gap: toRem(8);
-
-            &:hover,
-            &:focus-visible
-            {
-                text-decoration: underline;
-            }
-
-            &__icon{
-                flex-shrink: 0;
-                font-size: toRem(10);
-                color: $color-primary;
+                color: $color-secondary;
             }
         }
     }

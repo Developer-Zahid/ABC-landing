@@ -67,7 +67,7 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
 			$(".testimonial__slider").slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
-				// autoplay: true,
+				autoplay: true,
 				autoplaySpeed: 3000,
 				speed: 500,
 				arrows: false,
