@@ -1,0 +1,48 @@
+.banner{
+    @extend %stacking-context;
+    min-height: calc(var(--vh,1vh) * 100 - (var(--header-size) / 2));
+    display: flex;
+    align-items: center;
+    
+    &__bg{
+        @extend %full-width;
+        object-fit: cover;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    &__title{
+        font-size: toRem(30);
+        @include min-sm{
+            font-size: toRem(50);
+        }
+        @include min-md{
+            font-size: toRem(60);
+        }
+        @include min-lg{
+            font-size: toRem(80);
+        }
+        @include min-xxl{
+            font-size: toRem(100);
+        }
+        font-family: $font-secondary;
+        font-weight: 700;
+        line-height: 0.9;
+        letter-spacing: -2px;
+        @extend %uppercase;
+    }
+    
+    &__sub-title{
+        font-size: toRem(16);
+        @include min-md{
+            font-size: toRem(20);
+        }
+        @include min-lg{
+            font-size: toRem(30);
+        }
+        font-weight: 600;
+        font-family: $font-primary;
+        margin-bottom: toRem(30);
+        @extend %uppercase;
+    }
+}

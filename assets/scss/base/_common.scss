@@ -1,0 +1,163 @@
+/* Reset CSS */
+*,
+*::before,
+*::after
+{
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+::selection{
+	color: $color-white;
+	background: $color-primary;
+}
+
+html,
+body
+{
+	scroll-behavior: smooth;
+}
+
+html{
+	font-size: 16px;
+	text-size-adjust: none;
+}
+
+body {
+	color: $color-black;
+	font-family: $font-primary;
+	font-weight: 400;
+}
+
+a,
+button
+{
+	color: inherit;
+	font-family: inherit;
+}
+
+a,
+a:hover,
+a:focus,
+a:active
+{
+	color: currentColor;
+	text-decoration: none;
+}
+
+button,
+button:hover,
+button:focus,
+button:active
+{
+	outline: none;
+}
+
+input:-webkit-autofill{
+	-webkit-text-fill-color: unset;
+	transition: background-color 5000s;
+}
+
+img,
+svg
+{
+	display: block;
+}
+
+img{
+	object-fit: cover;
+	max-width: 100%;
+}
+
+.preloader{
+	z-index: 99999;
+}
+
+@include min-xxl {
+	.container{
+		max-width: toRem(1580)
+	}
+}
+
+.user-select-none{
+	pointer-events: none;
+}
+
+/* Common Section Gap Style */
+.section-gap{
+	padding: toRem(80) 0;
+	@include max-lg{
+		padding: toRem(60) 0;
+	}
+
+	&--fix{
+		padding-bottom: calc(toRem(80) - $gutter);
+		@include max-lg{
+			padding-bottom: calc(toRem(60) - $gutter);
+		}
+	}
+}
+
+/* Common Section Heading Style */
+.section-header{
+	margin-bottom: toRem(30);
+	@extend %uppercase;
+
+	&__title{
+		color: $color-primary;
+		font-size: toRem(18);
+		@include min-lg{
+			font-size: toRem(20);
+		}
+		font-family: $font-primary;
+		font-weight: 700;
+		margin-bottom: toRem(20);
+	}
+
+	&__sub-title{
+		color: $color-gray;
+		font-size: toRem(30);
+		@include min-xxl{
+			font-size: toRem(40);
+		}
+		font-family: $font-secondary;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: -0.8px;
+		margin-bottom: toRem(20);
+		@include min-xl{
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&--center{
+		text-align: center;
+	}
+}
+
+.underline{
+	position: relative;
+
+	&::after{
+		content: '';
+		display: block;
+		width: toRem(65);
+		height: 5px;
+		background-color: $color-primary;
+	}
+}
+
+.match-height > [class*="col"]{
+	display: flex;
+	flex-flow: column;
+}
+
+.match-height > [class*="col"] > *{
+	flex: 1 1 auto;
+}
+
+.text-primary,
+.bg-primary
+{
+	--bs-primary-rgb: #{$color-primary-rgb};
+}

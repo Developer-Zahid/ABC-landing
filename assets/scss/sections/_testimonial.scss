@@ -1,0 +1,37 @@
+.testimonial{
+    background-color: $color-primary--dark;
+    @extend %stacking-context;
+
+    &::after{
+        @extend %common-pseudo;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 20%;
+        background-color: $color-white;
+        pointer-events: none;
+    }
+
+    &__bg{
+        opacity: 0.5;
+        @extend %full-width;
+        z-index: -1;
+        mix-blend-mode: multiply;
+    }
+
+    @include min-xl{
+        .slick__arrows{
+            font-size: 3rem;
+            opacity: 0.5;
+            background-color: unset !important;
+
+            &:hover,
+            &:focus-visible
+            {
+                opacity: 1;
+            }
+        }
+    }
+
+}
