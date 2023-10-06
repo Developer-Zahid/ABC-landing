@@ -67,16 +67,16 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
 			$(".testimonial__slider").slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
-				autoplay: true,
+				// autoplay: true,
 				autoplaySpeed: 3000,
 				speed: 500,
-				arrows: true,
-				prevArrow: '<button class="slick__arrows slick__arrows--left border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>',
-				nextArrow: '<button class="slick__arrows slick__arrows--right border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>',
+				arrows: false,
 				dots: true,
 				pauseOnHover: false,
 				pauseOnFocus: false,
 				infinite: true,
+				centerMode: true,
+  				centerPadding: '0px',
 				responsive: [
 					{
 						breakpoint: 1200,
@@ -88,6 +88,7 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
 						breakpoint: 992,
 						settings: {
 							slidesToShow: 1,
+							centerMode: false,
 						}
 					},
 				]

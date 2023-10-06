@@ -100,9 +100,8 @@ img{
 
 /* Common Section Heading Style */
 .section-header{
-	margin-bottom: toRem(30);
-	@extend %uppercase;
-
+	margin-bottom: toRem(50);
+	
 	&__title{
 		color: $color-primary;
 		font-size: toRem(18);
@@ -112,22 +111,18 @@ img{
 		font-family: $font-primary;
 		font-weight: 700;
 		margin-bottom: toRem(20);
+		@extend %uppercase;
 	}
 
 	&__sub-title{
 		color: $color-secondary;
 		font-size: toRem(30);
 		@include min-xxl{
-			font-size: toRem(40);
+			font-size: toRem(50);
 		}
-		font-family: $font-secondary;
+		font-family: $font-primary;
 		font-weight: 700;
 		line-height: 1;
-		letter-spacing: -0.8px;
-		margin-bottom: toRem(20);
-		@include min-xl{
-			margin-bottom: toRem(30);
-		}
 	}
 }
 

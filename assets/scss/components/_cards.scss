@@ -1,117 +1,101 @@
 /* Testimonial Card Style */
-.testimonial__card{
-    position: relative;
-    background-color: $color-white;
-    @extend %card-gap;
-
-    &-wrapper{
-        padding-top: toRem(60);
-    }
+.testimonial{
+    &__card{
+        --_border-color: transparent;
+        background-color: $color-white;
+        @extend %card-gap;
+        border-left: 1px solid var(--_border-color);
+        @include min-xl{
+            border-right: 1px solid var(--_border-color);
+        }
+        
+        &__body{
+            $_padding: toRem(30);
+            padding-left: $_padding;
+            padding-right: $_padding;
+            padding-bottom: $_padding;
     
-    &__body{
-        padding: toRem(60) toRem(20) toRem(40);
-        @include min-xxl{
-            padding: toRem(70) toRem(40) toRem(60);
-        }
-    }
-
-    &__name{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: toRem(30);
-        font-weight: 700;
-        font-family: $font-primary;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: toRem(95);
-        height: toRem(95);
-        border-radius: 50rem;
-        border: toRem(6) solid $color-white;
-        @include min-xxl{
-            border-width: toRem(10);
-        }
-        @extend %uppercase;
-    }
-
-    &__text{
-        position: relative;
-        color: $color-gray;
-        font-size: toRem(18);
-        @include min-xxl{
-            font-size: toRem(20);
-        }
-        font-weight: 300;
-        font-family: $font-primary;
-        font-style: italic;
-
-        &::before{
-            content: '“';
-            position: absolute;
-            right: 0;
-            font-size: toRem(150);
-            @include min-xxl{
-                font-size: toRem(200);
+            &__quote{
+                color: rgba($color-primary-rgb, 0.20);
+                font-size: toRem(80);
             }
-            font-weight: 700;
-            font-family: Arial;
-            line-height: 1;
-            color: rgba($color-gray, $alpha: 0.1);
-            transform: translateY(-35%);
-            user-select: none;
-            pointer-events: none;
-            font-style: normal;
+    
+            &__icons{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) translateY(-80%);
+                bottom: 0;
+                color: #ffbf14;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                font-size: toRem(18);
+            }
+    
+            &__title{
+                color: $color-gray;
+                font-size: toRem(26);
+                @include min-lg{
+                    font-size: toRem(30);
+                }
+                font-weight: 600;
+                font-family: $font-primary;
+                margin-top: toRem(15);
+                margin-bottom: toRem(20);
+                line-height: 1;
+            }
+    
+            &__text{
+                position: relative;
+                color: $color-gray-light;
+                font-size: toRem(18);
+                @include min-xxl{
+                    font-size: toRem(22);
+                }
+                font-weight: 300;
+                font-family: $font-primary;
+                font-style: italic;
+                margin-bottom: 0;
+            }
         }
-
+    
+        &__footer{
+            $_padding: toRem(10);
+            padding-left: $_padding;
+            padding-right: $_padding;
+    
+            &__avatar{
+                font-size: toRem(26);
+                font-weight: 700;
+                font-family: $font-primary;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: toRem(60);
+                height: toRem(60);
+                border-radius: 50rem;
+                @extend %uppercase;
+                margin-bottom: toRem(20);
+            }
+    
+            &__title{
+                color: $color-gray;
+                font-size: toRem(20);
+                font-weight: 700;
+                font-family: $font-primary;
+            }
+    
+            &__text{
+                color: $color-gray-light;
+                font-size: toRem(18);
+                font-weight: 300;
+                font-family: $font-primary;
+            }
+        }
     }
-
-    &__icons{
-        color: #ffbf14;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        margin-bottom: toRem(15);
-    }
-
-    &__footer{
-        @extend %stacking-context;
-        background-color: $color-black;
-        padding: toRem(30) toRem(10);
-
-        &::before,
-        &::after
-        {
-            @extend %common-pseudo;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            transform-origin: bottom left;
-        }
-        
-        &::before{
-            transform: skewY(-3.6deg);
-            background-color: $color-primary;
-            height: toRem(40);
-        }
-        
-        &::after{
-            transform: skewY(-2deg);
-            background-color: $color-black;
-            height: toRem(50);
-        }
-    }
-
-    &__title{
-        font-size: toRem(20);
-        @include min-xxl{
-            font-size: toRem(24);
-        }
-        font-weight: 700;
-        font-family: $font-primary;
+    &__slide.slick-center .testimonial__card{
+        --_border-color: #e6e6e6;
     }
 }
 
