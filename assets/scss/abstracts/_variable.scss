@@ -5,7 +5,7 @@ $scss-color-primary:#da2128;
 $scss-color-primary-rgb: toRGB($scss-color-primary);
 $scss-color-secondary:#022561;
 $scss-color-secondary-rgb: toRGB($scss-color-secondary);
-$scss-color-secondary--dark:#010d23;
+$scss-color-secondary--dark: darken($scss-color-secondary, 12.50%);
 
 :root{
     --color-primary: #{$scss-color-primary};

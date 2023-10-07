@@ -23,19 +23,24 @@
 }
 
 .btn-primary{
+	--_btn-interaction-color: #{$color-secondary};
+	@at-root .bg-secondary &{
+		--_btn-interaction-color: #{$color-secondary--dark};
+	}
+
 	--bs-btn-bg: #{$color-primary};
 	--bs-btn-border-color: #{$color-primary};
 
-	--bs-btn-hover-bg: #{$color-secondary};
-	--bs-btn-hover-border-color: #{$color-secondary};
+	--bs-btn-hover-bg: var(--_btn-interaction-color);
+	--bs-btn-hover-border-color: var(--_btn-interaction-color);
 
-	--bs-btn-active-bg: #{$color-secondary};
-	--bs-btn-active-border-color: #{$color-secondary};
+	--bs-btn-active-bg: var(--_btn-interaction-color);
+	--bs-btn-active-border-color: var(--_btn-interaction-color);
 
 	&:focus{
 		color: $color-white;
-		background-color: $color-secondary;
-		border-color: $color-secondary;
+		background-color: var(--_btn-interaction-color);
+		border-color: var(--_btn-interaction-color);
 	}
 }
 

@@ -6,11 +6,11 @@
         background-color: $color-secondary--dark;
     }
 
-    .section-gap--fix{
-        @include max-xl{
-            padding-bottom: 0;
-        }
-    }
+    // .section-gap--fix{
+    //     @include max-lg{
+    //         padding-bottom: 0;
+    //     }
+    // }
 
     &__logo{
         max-height: toRem(130);
