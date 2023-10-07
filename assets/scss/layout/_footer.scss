@@ -6,12 +6,6 @@
         background-color: $color-secondary--dark;
     }
 
-    // .section-gap--fix{
-    //     @include max-lg{
-    //         padding-bottom: 0;
-    //     }
-    // }
-
     &__logo{
         max-height: toRem(130);
         @include max-lg{
@@ -68,13 +62,12 @@
         &__link{
             display: flex;
             align-items: center;
+            gap: toRem(8);
             font-size: toRem(16);
             @include min-sm{
                 font-size: toRem(17);
             }
-            font-weight: 300;
-            font-family: $font-primary;
-            gap: toRem(8);
+            @extend %fw-light;
             @extend %transition;
 
             &:hover,
@@ -113,8 +106,7 @@
             @include min-sm{
                 font-size: toRem(17);
             }
-            font-weight: 300;
-            font-family: $font-primary;
+           @extend %fw-light;
         }
 
         &__link{

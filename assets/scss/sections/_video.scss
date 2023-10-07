@@ -1,11 +1,12 @@
 .video{
     --_color-shape: #{$color-primary};
-    
+
     @extend %stacking-context;
     overflow: hidden;
 
     &::before{
         @extend %common-pseudo;
+        z-index: -1;
         top: 0;
         left: 0;
         background-color: var(--_color-shape);
@@ -25,6 +26,7 @@
 
         &::before{
             @extend %common-pseudo;
+            z-index: -1;
             background-color: var(--_color-shape);
 
             @include max-lg{
@@ -42,9 +44,6 @@
         }
     }
     &__text{
-        font-size: toRem(18);
-        font-weight: 300;
-        font-family: $font-primary;
-        line-height: 1.67;
+        @extend %common-text;
     }
 }

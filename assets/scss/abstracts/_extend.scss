@@ -34,3 +34,17 @@
 %card-gap{
     margin-bottom: $gutter;
 }
+
+%common-text{
+    line-height: 1.67;
+    font-size: toRem(16);
+    @include min-md{
+        font-size: toRem(18);
+    }
+    @extend %fw-light;
+}
+
+%fw-light{
+    font-weight: 300;
+    font-family: $font-primary;
+}

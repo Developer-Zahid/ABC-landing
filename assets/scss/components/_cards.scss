@@ -53,8 +53,7 @@
                 @include min-xxl{
                     font-size: toRem(22);
                 }
-                font-weight: 300;
-                font-family: $font-primary;
+                @extend %fw-light;
                 font-style: italic;
                 margin-bottom: 0;
             }
@@ -89,8 +88,7 @@
             &__text{
                 color: $color-gray-light;
                 font-size: toRem(18);
-                font-weight: 300;
-                font-family: $font-primary;
+                @extend %fw-light;
             }
         }
     }
@@ -125,11 +123,6 @@
 
     &__text{
         color: $color-gray-light;
-        @include min-lg{
-            font-size: toRem(18);
-        }
-        font-weight: 300;
-        font-family: $font-primary;
-        line-height: 1.67;
+        @extend %common-text;
     }
 }

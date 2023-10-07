@@ -42,7 +42,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/plugins/slick-slider/css/slick.min.css">
-	<link rel="stylesheet" href="./assets/css/style.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 	<!-- Preloader Section -->
@@ -66,7 +66,7 @@
 
 	<!-- Banner Section -->
 	<section class="banner bg-black">
-		<img class="banner__bg user-select-none" src="./assets/images/banner/banner.png" alt="banner" aria-hidden="true">
+		<img class="banner__bg user-select-none" src="./assets/images/services/service.png" alt="banner" loading="lazy" aria-hidden="true">
 		<div class="container">
 			<div class="banner__content py-5">
 				<div class="banner__header text-center text-white">
@@ -92,11 +92,28 @@
 	</section>
 
 	<!-- Service Section -->
-	<section class="service section-gap section-gap--fix">
+	<section class="service section-gap bg-primary pb-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 text-white pt-lg-4">
+					<h1 class="section-header__title text-white">OUR SERVICES</h1>
+					<h2 class="section-header__sub-title text-white mb-4">Window Replacements</h2>
+					<p class="service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare scelerisque erat vel rutrum. Duis sem enim, tempor sed gravida imperdiet, bibendum et purus. Donec egestas lectus at sapien hendrerit non convallis magna scelerisque. Mauris hendrerit erat sit amet enim pharetra ut consectetur odio pharetra.</p>
+					<p class="service__text">Nam ut mauris et purus fermentum suscipit vel eget mi. Mauris lobortis condimentum nisi, et fermentum risus luctus eget. Cras scelerisque enim et massa scelerisque in dapibus justo rutrum. Duis sit amet mauris et dui dignissim posuere. Sed quis massa et risus pulvinar rhoncus quis sit amet magna. Vivamus ac rhoncus arcu.</p>
+					<p class="service__text">Quisque sit amet tortor nulla, sit amet tempus metus. Vivamus placerat scelerisque sapien vitae aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+				</div>
+				<div class="col-lg-6">
+					<!-- <img width="546" height="753" src="https://www.mydomaine.com/thmb/bepet4VMGUG70sCLFNQRdZm9bbg=/2048x0/filters:no_upscale():strip_icc()/SuCasaDesign-Modern-9335be77ca0446c7883c5cf8d974e47c.jpg"> -->
+					<figure class="service__figure mb-0 bg-black overflow-hidden">
+						<img class="service__figure__image user-select-none" src="./assets/images/services/service.png" alt="service" loading="lazy">
+					</figure>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- CTA Section -->
-	<section class="cta section-gap bg-secondary">
+	<section class="cta section-gap bg-secondary pt-5">
 		<div class="container">
 			<div class="text-center">
 				<h1 class="section-header__title text-white">Ask about our</h1>
@@ -179,8 +196,8 @@
 	<!-- Video Section -->
 	<section class="video section-gap bg-secondary">
 		<div class="container">
-			<div class="row">
-				<div class="col-xl-7 col-lg-8 mx-auto pt-xl-4 video__left">
+			<div class="row align-items-center">
+				<div class="col-xl-7 col-lg-8 mx-auto video__left">
 					<figure class="video__figure ratio ratio-16x9 bg-black mb-0">
 						<!--
 						---------------------------------------------------------------------------------------
