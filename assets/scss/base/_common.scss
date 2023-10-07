@@ -85,16 +85,14 @@ img{
 
 /* Common Section Gap Style */
 .section-gap{
-	padding: toRem(80) 0;
+	--_section-gap: #{toRem(80)};
 	@include max-lg{
-		padding: toRem(60) 0;
+		--_section-gap: #{toRem(60)};
 	}
-
+	
+	padding: var(--_section-gap) 0;
 	&--fix{
-		padding-bottom: calc(toRem(80) - $gutter);
-		@include max-lg{
-			padding-bottom: calc(toRem(60) - $gutter);
-		}
+		padding-bottom: calc(var(--_section-gap) - $gutter);
 	}
 }
 

@@ -42,7 +42,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/plugins/slick-slider/css/slick.min.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
 	<!-- Preloader Section -->
@@ -171,6 +171,42 @@
 						<h3 class="feature__card__title">Improved Home Value</h3>
 						<p class="feature__card__text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare scelerisque erat vel rutrum sem enim.</p>
 					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Video Section -->
+	<section class="video section-gap bg-secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-7 col-lg-8 mx-auto pt-xl-4 video__left">
+					<figure class="video__figure ratio ratio-16x9 bg-black mb-0">
+						<!--
+						---------------------------------------------------------------------------------------
+						If want to lazy load the iframe then put the iframe src link into the data-iframe-src below
+						---------------------------------------------------------------------------------------
+						-->
+						<button data-iframe-src="https://www.youtube.com/embed/Ah6pkCWlGvw?si=ym9fDm72OtOgsD3n" type="button" class="d-block border-0 bg-transparent p-0">
+							<img class="w-100 h-100 user-select-none" src="./assets/images/video/poster.png" alt="iframe poster" loading="lazy">
+							<svg class="play-btn position-absolute top-50 start-50 translate-middle d-block" width="1em" height="1em" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M21.5212 2.58C21.2688 1.60333 20.7156 0.776667 19.7676 0.516667C18.0497 0.0433333 11 0 11 0C11 0 3.95029 0.0433333 2.23235 0.516667C1.28441 0.776667 0.734412 1.60333 0.478824 2.58C0.0194118 4.35 0 8 0 8C0 8 0.0194118 11.65 0.478824 13.42C0.731176 14.3967 1.28441 15.2233 2.23235 15.4833C3.95029 15.9567 11 16 11 16C11 16 18.0497 15.9567 19.7676 15.4833C20.7156 15.2233 21.2688 14.3967 21.5212 13.42C21.9806 11.65 22 8 22 8C22 8 21.9806 4.35 21.5212 2.58Z" fill="#FF0000"/>
+								<path d="M14.5579 8.00033L8.73438 4.66699V11.3337" fill="white"/>
+							</svg>
+						</button>
+						<!--
+						---------------------------------------------------------------------------------------------------------------------------
+						Or, instantly load iframe without lazyload. Then you should removed the above codes and past the whole iframe tag code here like exemple below
+						----------------------------------------------------------------------------------------------------------------------------
+						-->
+						<!-- <iframe src="https://www.youtube.com/embed/Ah6pkCWlGvw?si=ym9fDm72OtOgsD3n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe> -->
+					</figure>
+				</div>
+				<div class="col-xl-5 pt-4 pt-xl-0 text-center text-xl-start text-white">
+					<h1 class="section-header__title text-white">Lorem ipsum dolor</h1>
+					<h2 class="section-header__sub-title text-white mb-4">Quisque sit amet tortor nulla</h2>
+					<p class="video__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare scelerisque erat vel rutrum. Duis sem enim, tempor sed gravida imperdiet, bibendum et purus. Donec egestas lectus at sapien hendrerit non convallis magna scelerisque. Mauris hendrerit erat sit amet enim pharetra ut consectetur odio pharetra.</p>
+					<p class="video__text">Nam ut mauris et purus fermentum suscipit vel eget mi. Mauris lobortis condimentum nisi, et fermentum risus luctus eget. Cras scelerisque enim et massa scelerisque in dapibus justo rutrum. Duis sit amet mauris et dui dignissim posuere. </p>
 				</div>
 			</div>
 		</div>

@@ -28,7 +28,7 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
     	$('html').css('--header-size', $('header').innerHeight() +'px');
 	};
 
-    function fixVerticalHeight() {
+    function calculateVerticalHeight() {
 		var vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', vh + 'px');
 	}
@@ -41,7 +41,7 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
 	/* Window on resize Event */
 	$(window).on('resize', function () {
 		headerHeightFixer();
-		fixVerticalHeight();
+		calculateVerticalHeight();
     });
 	
 	/* Document on ready Event */
@@ -49,20 +49,19 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
 		$('header').before('<div class="header-height-fix"></div>');
 		headerHeightFixer();
 
-		fixVerticalHeight();
+		calculateVerticalHeight();
 
-		/* scroll top btn */
+		/* scroll top btn function */
 		$(".scroll-top").on("click", function () {
 			$("html,body").animate({scrollTop: 0},50);
 		});
 
-		/* lazy load map iframe */
-		setTimeout(()=>{
-			$('[data-iframe-src]').each(function(){
-				$(this).html(`<iframe src="${$(this).attr("data-iframe-src")}" style="border:0;" allowfullscreen frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`)
-			})
-		}, 2000)
+		/* Load youtube iframe after an event function */
+		$('[data-iframe-src]').on('click', function(){
+			$(this).closest('.video__figure').html(`<iframe src="${$(this).data('iframe-src')}${($(this).data('iframe-src').indexOf('?') > -1) ? '&': '?'}autoplay=1&enablejsapi=1&controls=1&autopause=0&muted=1" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" loading="lazy"></iframe>`)
+		})
 
+		/* Load slick slider if exist in DOM function */
 		if($(".testimonial__slider").length > 0){
 			$(".testimonial__slider").slick({
 				slidesToShow: 3,

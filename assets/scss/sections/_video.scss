@@ -1,0 +1,50 @@
+.video{
+    --_color-shape: #{$color-primary};
+    
+    @extend %stacking-context;
+    overflow: hidden;
+
+    &::before{
+        @extend %common-pseudo;
+        top: 0;
+        left: 0;
+        background-color: var(--_color-shape);
+        
+        @include max-lg{
+            right: 0;
+            height: var(--_section-gap);
+        }
+        @include min-xl{
+            width: calc((100vw - 1140px) / 2);
+            height: 100%;
+        }
+    }
+
+    &__left{
+        @extend %stacking-context;
+
+        &::before{
+            @extend %common-pseudo;
+            background-color: var(--_color-shape);
+
+            @include max-lg{
+                top: 0;
+                left: -100%;
+                right: -100%;
+                bottom: 50%;
+            }
+            @include min-xl{
+                top: -100%;
+                bottom: -100%;
+                left: 0;
+                right: 50%;
+            }
+        }
+    }
+    &__text{
+        font-size: toRem(18);
+        font-weight: 300;
+        font-family: $font-primary;
+        line-height: 1.67;
+    }
+}
