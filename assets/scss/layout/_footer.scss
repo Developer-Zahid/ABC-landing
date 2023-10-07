@@ -17,15 +17,19 @@
         @extend %card-gap;
 
         &__title{
-            margin-bottom: toRem(20);
-            font-size: toRem(22);
+            font-size: toRem(20);
+            @include max-xxxs{
+                font-size: toRem(18);
+			}
+            @include min-xl{
+                font-size: toRem(22);
+			}
             font-weight: 700;
             font-family: $font-primary;
             @extend %uppercase;
-
+            margin-bottom: toRem(23);
+            
             &.underline::after{
-                width: toRem(42);
-                height: 4px;
                 margin-top: toRem(20);
             }
         }

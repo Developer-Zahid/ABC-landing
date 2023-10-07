@@ -14,8 +14,11 @@
 
 		&-brand__image{
 			max-height: toRem(65);
+			@include max-xxxs{
+				max-height: toRem(50);
+			}
 			@include min-xxl{
-				max-height: toRem(90);
+				max-height: toRem(100);
 			}
 			@extend %transition;
 		}
@@ -23,8 +26,14 @@
 		&__btn{
 			display: inline-block;
 			font-size: toRem(16);
+			@include max-xxxs{
+				font-size: toRem(14);
+			}
 			@include min-sm{
 				font-size: toRem(24);
+			}
+			@include min-xxl{
+				font-size: toRem(30);
 			}
 			font-weight: 800;
 			font-family: $font-primary;

@@ -1,29 +1,32 @@
 .form{
+    &-label{
+        color: $color-gray;
+        @include min-lg{
+            font-size: toRem(18);
+        }
+        font-weight: 600;
+        font-family: $font-primary;
+    }
     &-control,
     &-select
     {
-        color: #a3a3a3;
+        --bs-border-color: #d2d2d2;
+        color: $color-gray;
+        @extend %fw-light;
+        
 
-        @include min-xxl{
-            font-size: toRem(18);
-            padding: toRem(22) toRem(20);
-        }
         @include max-xl{
             padding-top: toRem(15);
             padding-bottom: toRem(15);
         }
-        @include max-sm{
-            padding-top: toRem(8);
-            padding-bottom: toRem(8);
-        }
-
+        
         &::placeholder{
             color: currentColor;
         }
-
         &:focus{
             color: $color-black;
             box-shadow: none;
+            border-color: $color-secondary;
         }
 
         option{

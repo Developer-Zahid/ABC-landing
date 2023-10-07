@@ -42,15 +42,15 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/plugins/slick-slider/css/slick.min.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
 	<!-- Preloader Section -->
-	<!-- <div class="preloader position-fixed w-100 h-100 bg-white">
+	<div class="preloader position-fixed w-100 h-100 bg-white">
 		<div class="preloader__container w-100 h-100 d-flex align-items-center justify-content-center p-2">
 			<img class="user-select-none" src="./assets/images/logo/logo.png" alt="logo" height="100">
 		</div>
-	</div> -->
+	</div>
 
 	<!-- Header Section -->
 	<header class="header bg-white fixed-top">
@@ -112,7 +112,7 @@
 						<div class="about__card__icon">
 							<img class="about__card__icon__image user-select-none" src="./assets/images/about/icon-2.png" alt="about" height="74" loading="lazy">
 						</div>
-						<h3 class="about__card__title">Window Replacements</h3>
+						<h3 class="about__card__title">Bathroom Remodels</h3>
 						<p class="about__card__text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare scelerisque erat vel rutrum sem enim.</p>
 					</div>
 				</div>
@@ -121,7 +121,7 @@
 						<div class="about__card__icon">
 							<img class="about__card__icon__image user-select-none" src="./assets/images/about/icon-3.png" alt="about" height="74" loading="lazy">
 						</div>
-						<h3 class="about__card__title">Window Replacements</h3>
+						<h3 class="about__card__title">Decks</h3>
 						<p class="about__card__text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare scelerisque erat vel rutrum sem enim.</p>
 					</div>
 				</div>
@@ -270,13 +270,9 @@
 	<!-- Testimonial Section -->
 	<section class="testimonial section-gap section-gap--fix">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-6">
-					<div class="section-header text-center">
-						<h1 class="section-header__title">Testimonials</h1>
-						<h2 class="section-header__sub-title">What Customer Say?</h2>
-					</div>
-				</div>
+			<div class="section-header text-center">
+				<h1 class="section-header__title">Testimonials</h1>
+				<h2 class="section-header__sub-title">What Customer Say?</h2>
 			</div>
 			<div class="testimonial__slider row justify-content-center gx-0">
 				<div class="testimonial__slide col-lg-4 col-md-10">
@@ -394,12 +390,114 @@
 		</div>
 	</section>
 
+	<!-- Form Section -->
+	<section class="section-gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="section-header text-center">
+						<h1 class="section-header__title">Contact Us</h1>
+						<h2 class="section-header__sub-title">Nationwide Trust. Locally Owned & Operated.</h2>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<form class="form" action="#!">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formDealerState" class="form-label">Dealer State</label>
+									<select id="formDealerState" name="dealer_state" class="form-select">
+										<option selected disabled>Select State</option>
+										<option value="Bangladesh">Bangladesh</option>
+										<option value="USA">USA</option>
+										<option value="UAE">UAE</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formDealerCity" class="form-label">Dealer City</label>
+									<select id="formDealerCity" name="dealer_city" class="form-select">
+										<option selected disabled>Select City</option>
+										<option value="Dhaka">Dhaka</option>
+										<option value="City Name A">City Name A</option>
+										<option value="City Name B">City Name B</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formFirstName" class="form-label">First Name <span class="text-danger">*</span></label>
+									<input type="text" id="formFirstName" name="first_name" class="form-control" required>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formLastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+									<input type="text" id="formLastName" name="last_name" class="form-control" required>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="mb-3">
+									<label for="formAddress" class="form-label">Address</label>
+									<textarea id="formAddress" name="address" class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formCity" class="form-label">City</label>
+									<input type="text" id="formCity" name="city" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formState" class="form-label">State</label>
+									<select id="formState" name="state" class="form-select">
+										<option selected disabled>Select State</option>
+										<option value="Bangladesh">Bangladesh</option>
+										<option value="USA">USA</option>
+										<option value="UAE">UAE</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="mb-3">
+									<label for="formZip" class="form-label">Zip Code</label>
+									<input type="text" id="formZip" name="zip_code" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formEmail" class="form-label">Email <span class="text-danger">*</span></label>
+									<input type="email" id="formEmail" name="email" class="form-control" required>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label for="formPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+									<input type="number" id="formPhone" name="phone" class="form-control" required>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="mb-3">
+									<label for="formInterest" class="form-label">Products / Services Interested in <span class="text-danger">*</span></label>
+									<input type="text" id="formInterest" name="interest" class="form-control" required>
+								</div>
+								<button type="submit" class="btn btn-primary w-100">Get Your Free Estimate</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Footer Section -->
 	<footer class="footer">
 		<div class="footer__top section-gap section-gap--fix">
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-3 col-lg-4">
+					<div class="col-lg-3">
 						<div class="footer__block">
 							<a href="/" class="d-inline-block">
 								<img class="footer__logo" src="./assets/images/logo/logo-white.png" alt="logo" loading="lazy">
@@ -423,7 +521,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-lg-4 col-sm-6">
+					<div class="col-lg-3 col-md-4 col-sm-6">
 						<div class="footer__block">
 							<h3 class="footer__block__title underline">Services</h3>
 							<ul class="footer__list">
@@ -448,7 +546,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-xl-3 col-lg-4 col-sm-6">
+					<div class="col-lg-3 col-md-4 col-sm-6">
 						<div class="footer__block">
 							<h3 class="footer__block__title underline">Service Areas</h3>
 							<ul class="footer__list">
@@ -485,7 +583,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-xl-3 col-lg-4 col-sm-6">
+					<div class="col-lg-3 col-md-4 col-sm-6">
 						<div class="footer__block">
 							<h3 class="footer__block__title underline">Contact Us</h3>
 							<ul class="footer__list">

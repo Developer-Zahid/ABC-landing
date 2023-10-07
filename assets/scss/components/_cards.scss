@@ -85,7 +85,7 @@
         }
         
         &__body{
-            $_padding: toRem(30);
+            $_padding: toRem(20);
             padding-left: $_padding;
             padding-right: $_padding;
             padding-bottom: $_padding;
@@ -111,6 +111,9 @@
             &__title{
                 color: $color-gray;
                 font-size: toRem(26);
+                @include max-xxxs{
+                    font-size: toRem(20);
+                }
                 @include min-lg{
                     font-size: toRem(30);
                 }
@@ -125,12 +128,16 @@
                 position: relative;
                 color: $color-gray-light;
                 font-size: toRem(18);
+                @include max-xxxs{
+                    font-size: toRem(16);
+                }
                 @include min-xxl{
                     font-size: toRem(22);
                 }
                 @extend %fw-light;
                 font-style: italic;
                 margin-bottom: 0;
+                line-height: 1.36;
             }
         }
     

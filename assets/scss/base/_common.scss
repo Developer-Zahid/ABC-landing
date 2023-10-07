@@ -103,7 +103,9 @@ img{
 	&__title{
 		color: $color-primary;
 		font-size: toRem(18);
-		letter-spacing: trackingToSpacing(100, 18px);
+		@include max-xxxs{
+			font-size: toRem(16);
+		}
 		@include min-lg{
 			font-size: toRem(20);
 			letter-spacing: trackingToSpacing(100, 20px);
@@ -124,6 +126,9 @@ img{
 	&__sub-title{
 		color: $color-secondary;
 		font-size: toRem(30);
+		@include max-xxxs{
+			font-size: toRem(24);
+		}
 		@include min-xxl{
 			font-size: toRem(50);
 		}
@@ -143,8 +148,8 @@ img{
 	&::after{
 		content: '';
 		display: block;
-		width: toRem(65);
-		height: 5px;
+		width: toRem(40);
+		height: 4px;
 		background-color: $color-primary;
 	}
 }

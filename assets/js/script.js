@@ -57,9 +57,11 @@ Author Email: 	    dgtaltechzahidhasan@gmail.com
 		});
 
 		/* Load youtube iframe after an event function */
-		$('[data-iframe-src]').on('click', function(){
-			$(this).closest('.video__figure').html(`<iframe src="${$(this).data('iframe-src')}${($(this).data('iframe-src').indexOf('?') > -1) ? '&': '?'}autoplay=1&enablejsapi=1&controls=1&autopause=0&muted=1" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" loading="lazy"></iframe>`)
-		})
+		if($('[data-iframe-src]').length > 0){
+			$('[data-iframe-src]').on('click', function(){
+				$(this).closest('.video__figure').html(`<iframe src="${$(this).data('iframe-src')}${($(this).data('iframe-src').indexOf('?') > -1) ? '&': '?'}autoplay=1&enablejsapi=1&controls=1&autopause=0&muted=1" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" loading="lazy"></iframe>`)
+			})
+		}
 
 		/* Load slick slider if exist in DOM function */
 		if($(".testimonial__slider").length > 0){
