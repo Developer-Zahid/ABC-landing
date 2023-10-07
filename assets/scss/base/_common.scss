@@ -75,7 +75,7 @@ img{
 
 @include min-xxl {
 	.container{
-		max-width: toRem(1580)
+		max-width: toRem(1240)
 	}
 }
 
@@ -103,8 +103,17 @@ img{
 	&__title{
 		color: $color-primary;
 		font-size: toRem(18);
+		letter-spacing: trackingToSpacing(100, 18px);
 		@include min-lg{
 			font-size: toRem(20);
+			letter-spacing: trackingToSpacing(100, 20px);
+		}
+
+		@at-root .cta &{
+			@include min-xxl{
+				font-size: toRem(30);
+				letter-spacing: trackingToSpacing(200, 30px);
+			}
 		}
 		font-family: $font-primary;
 		font-weight: 700;

@@ -1,3 +1,78 @@
+/* About Card Style */
+.about__card{
+    margin-top: $gutter;
+
+    @at-root .active{
+        @include min-md{
+            border-left: 1px solid #e4e4e4;
+        }
+        @include min-lg{
+            border-right: 1px solid #e4e4e4;
+        }
+    }
+
+    &__icon{
+        width: toRem(129);
+        height: toRem(129);
+        border-radius: 50rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-primary;
+
+        &__image{
+            height: auto;
+        }
+    }
+
+    &__title{
+        color: $color-gray;
+        font-size: toRem(18);
+        @include min-md{
+            font-size: toRem(20);
+        }
+        font-weight: 700;
+        font-family: $font-primary;
+        margin-top: toRem(20);
+    }
+
+    &__text{
+        color: $color-gray-light;
+        @extend %common-text;
+    }
+
+}
+
+/* Feature Card Style */
+.feature__card{
+    @extend %card-gap;
+    
+    &__icon{
+        height: toRem(100);
+        display: inline-flex;
+        align-items: flex-end;
+
+        &__image{
+            height: auto;
+        }
+    }
+
+    &__title{
+        color: $color-gray;
+        font-size: toRem(18);
+        @include min-md{
+            font-size: toRem(20);
+        }
+        font-weight: 700;
+        font-family: $font-primary;
+    }
+
+    &__text{
+        color: $color-gray-light;
+        @extend %common-text;
+    }
+}
+
 /* Testimonial Card Style */
 .testimonial{
     &__card{
@@ -94,35 +169,5 @@
     }
     &__slide.slick-center .testimonial__card{
         --_border-color: #e6e6e6;
-    }
-}
-
-/* Feature Card Style */
-.feature__card{
-    @extend %card-gap;
-    
-    &__icon{
-        height: toRem(100);
-        display: inline-flex;
-        align-items: flex-end;
-
-        &__image{
-            height: auto;
-        }
-    }
-
-    &__title{
-        color: $color-gray;
-        font-size: toRem(18);
-        @include min-md{
-            font-size: toRem(20);
-        }
-        font-weight: 700;
-        font-family: $font-primary;
-    }
-
-    &__text{
-        color: $color-gray-light;
-        @extend %common-text;
     }
 }

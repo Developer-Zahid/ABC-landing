@@ -1,3 +1,6 @@
 .about{
-    all: unset;
+    &__text{
+        @extend %common-text;
+        color: $color-gray;
+    }
 }

@@ -10,3 +10,7 @@
     $rgbValue: red($color) + ", " + green($color) + ", " + blue($color);
     @return $rgbValue;
 }
+@function trackingToSpacing($trackingValue, $fontSize){
+    $letterSpacing: calc($trackingValue / 1000 * $fontSize);
+    @return $letterSpacing;
+}

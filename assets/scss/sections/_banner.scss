@@ -26,11 +26,14 @@
 
     &__title{
         font-size: toRem(40);
+        letter-spacing: trackingToSpacing(50, 40px);
         @include min-lg{
             font-size: toRem(60);
+            letter-spacing: trackingToSpacing(50, 60px);
         }
         @include min-xxl{
             font-size: toRem(90);
+            letter-spacing: trackingToSpacing(50, 90px);
         }
         font-family: $font-primary;
         font-weight: 800;
